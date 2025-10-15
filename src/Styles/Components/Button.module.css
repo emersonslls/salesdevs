@@ -1,0 +1,81 @@
+.Btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 76px;
+  height: 76px;
+  background: linear-gradient(135deg, #066FD5 0%, #003FFF 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  z-index: 1000;
+  cursor: pointer;
+  overflow: visible;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.Pulse {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 63, 255, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(0.5);
+    opacity: 0.6;
+  }
+}
+
+.Icon {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+/* <---- CSS REPOSNSIVO ----> */
+
+@media (max-width: 480px)
+/* <---- CSS MOBILE ----> */
+  {
+  .Btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .Pulse {
+    width: 70px;
+    height: 70px;
+  }
+
+  .Icon {
+    width: 28px;
+    height: 28px;
+    z-index: 1;
+  }
+}

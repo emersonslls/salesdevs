@@ -1,0 +1,386 @@
+@import url(../../Global/Global.css);
+
+.Contatos {
+  position: relative;
+  width: 100%;
+  height: 1462px;
+  overflow: hidden;
+
+  background: var(--Preto);
+
+  & svg {
+    position: absolute;
+    width: 900px;
+    height: 1820px;
+    left: -400px;
+    top: 1030px;
+    z-index: 0;
+  }
+}
+
+.TextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 36px;
+
+  position: absolute;
+  width: calc(100% - 8px);
+  height: auto;
+  left: calc(50% - (100% - 8px) / 2);
+  top: 168px;
+
+  & h1 {
+    width: 100%;
+    height: auto;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    leading-trim: both;
+    text-edge: cap;
+    align-items: center;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    & span {
+      color: var(--Azul);
+    }
+  }
+
+  & .Description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 95%;
+    height: auto;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    & h2 {
+      width: 100%;
+      height: auto;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      display: flex;
+      align-items: center;
+
+      color: var(--Branco);
+
+      flex: none;
+      order: 0;
+      align-self: stretch;
+      flex-grow: 0;
+    }
+
+    & p {
+      width: 100%;
+      height: auto;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+
+      color: var(--Cinza);
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+}
+
+.ContainerContatos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 664px;
+}
+
+.CardContainer {
+  position: relative;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  background: linear-gradient(135deg, #f0ede624, #f0ede600 72%);
+  box-shadow: 73px 44px 34px rgba(33, 33, 33, 0.01),
+    41px 25px 29px rgba(33, 33, 33, 0.03), 18px 11px 21px rgba(33, 33, 33, 0.04),
+    5px 3px 12px rgba(33, 33, 33, 0.05);
+
+  width: 380px;
+  height: 200px;
+
+  & .CardContact {
+    box-sizing: border-box;
+
+    width: 98%;
+    height: 98%;
+
+    background: linear-gradient(100.41deg, #050506 0%, #101010 100%);
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+
+    & .Icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 9.75px;
+      gap: 9.75px;
+
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      left: 16px;
+      top: 16px;
+
+      background: linear-gradient(135deg, #066fd5 0%, #003fff 100%);
+      box-shadow: 0px 22.2857px 9.28571px rgba(4, 99, 223, 0.01),
+        0px 13px 7.42857px rgba(4, 99, 223, 0.05),
+        0px 5.57143px 5.57143px rgba(4, 99, 223, 0.09),
+        0px 1.85714px 3.71429px rgba(4, 99, 223, 0.1);
+      border-radius: 13px;
+    }
+
+    & .Btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 11.34px;
+
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 20px;
+      top: 18px;
+
+      background: var(--Branco);
+      border-radius: 100%;
+      cursor: pointer;
+      border: none;
+
+      transition: transform 0.3s ease;
+
+      & img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &:hover .Btn {
+      transform: rotate(45deg);
+    }
+
+    & p {
+      position: absolute;
+      width: calc(100% - 60px);
+      height: auto;
+      left: 16px;
+      top: 96px;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: var(--Cinza);
+    }
+  }
+
+  & .CardContact:hover {
+    background: linear-gradient(145deg, #101010 0%, #0a0a0b 100%);
+  }
+}
+
+/* Responsivo
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Contatos {
+    height: 1300px;
+
+    & svg {
+      width: 1000px;
+      height: 1820px;
+      left: -100px;
+      top: 1030px;
+    }
+  }
+
+  .TextContainer {
+    gap: 20px;
+
+    width: calc(100% - 320px);
+    left: 78px;
+    top: 168px;
+
+    & .Description {
+      gap: 16px;
+
+      width: 90%;
+    }
+  }
+
+  .ContainerContatos {
+    gap: 32px;
+
+    width: calc(100% - 320px);
+    left: calc(50% - (100% - 320px) / 2);
+    top: 560px;
+  }
+
+  .CardContainer {
+    width: 400px;
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1024px) {
+  .Contatos {
+    height: 1020px;
+
+    & svg {
+      width: 1000px;
+      height: 1820px;
+      left: -100px;
+      top: 1030px;
+    }
+  }
+
+  .TextContainer {
+    gap: 20px;
+
+    width: calc(100% - 620px);
+    left: 78px;
+    top: 168px;
+
+    & h1 {
+      font-size: 52px;
+      line-height: 51px;
+    }
+
+    & .Description {
+      gap: 20px;
+
+      width: 95%;
+    }
+  }
+
+  .ContainerContatos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+    gap: 17px 40px;
+
+    width: calc(100% - 78px);
+    left: calc(50% - (100% - 78px) / 2);
+    top: 540px;
+  }
+
+  .CardContainer {
+    width: 390px;
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .Contatos {
+    height: 960px;
+
+    & svg {
+      position: absolute;
+      width: 1422px;
+      height: 1113px;
+      left: 332px;
+      top: -118px;
+      z-index: 0;
+    }
+  }
+
+  .TextContainer {
+    gap: 20px;
+
+    width: calc(100% - 920px);
+    left: 120px;
+    top: 182px;
+
+    & h1 {
+      font-size: 76px;
+      line-height: 85px;
+    }
+
+    & .Description {
+      gap: 20px;
+
+      width: 80%;
+
+      & h2 {
+        font-size: 28px;
+        line-height: 38px;
+      }
+
+      & p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .ContainerContatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+
+    width: calc(100% - 527px);
+    left: calc(50% - (100% - 527px) / 2);
+    top: 660px;
+  }
+
+  .CardContainer {
+    width: 420px;
+  }
+}

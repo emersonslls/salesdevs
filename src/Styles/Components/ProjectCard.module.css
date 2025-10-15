@@ -1,0 +1,516 @@
+.CardWrapper {
+  padding: 3px;
+  border-radius: 36px;
+
+  background: linear-gradient(135deg, #f0ede624, #f0ede600 72%);
+  box-shadow: 73px 44px 34px rgba(33, 33, 33, 0.01),
+    41px 25px 29px rgba(33, 33, 33, 0.03), 18px 11px 21px rgba(33, 33, 33, 0.04),
+    5px 3px 12px rgba(33, 33, 33, 0.05);
+
+  width: 100%;
+  height: 400px;
+}
+
+.Card {
+  position: relative;
+  background: var(--Preto);
+  border-radius: 34px;
+  padding: 2px;
+  overflow: hidden;
+
+  width: 100%;
+  height: 394px;
+}
+
+.Detail {
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  left: 20px;
+  top: 30px;
+
+  background: linear-gradient(90deg, #066fd5 0%, rgba(6, 111, 213, 0) 100%);
+  border-radius: 8px;
+}
+
+.NameProject {
+  position: absolute;
+  width: auto;
+  height: 22px;
+  left: 20px;
+  top: 52px;
+
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 85px;
+
+  leading-trim: both;
+  text-edge: cap;
+  display: flex;
+  align-items: center;
+
+  color: var(--Branco);
+}
+
+.Description {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: auto;
+  left: 20px;
+  top: 100px;
+
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+
+  leading-trim: both;
+  text-edge: cap;
+  display: flex;
+  align-items: center;
+
+  color: var(--Cinza);
+}
+
+.Techs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  position: absolute;
+  width: auto;
+  height: 20px;
+  left: 20px;
+  top: 280px;
+
+  & h2 {
+    width: auto;
+    height: 11px;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+
+    color: var(--Cinza);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  & .IconsTechs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 12px;
+
+    width: auto;
+    height: 20px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+}
+
+.Btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 8px 8px 20px;
+  gap: 15px;
+
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: 16px;
+  right: 16px;
+
+  background: linear-gradient(93.33deg, #066fd5 0%, #003fff 100%);
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+
+  font-family: var(--font-plus);
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--Branco);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  overflow: hidden;
+
+  & .IconArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 28.23px;
+    height: 28.23px;
+    background: var(--Branco);
+    border-radius: 9999px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .IconArrow {
+    transform: rotate(45deg);
+  }
+}
+
+.Btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  opacity: 0.5;
+  transform: skewX(-20deg);
+  animation: shine 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+/* Responsivo
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .CardWrapper {
+    width: 80%;
+    height: 400px;
+  }
+
+  .Detail {
+    left: 32px;
+    top: 40px;
+  }
+
+  .NameProject {
+    left: 32px;
+    top: 62px;
+  }
+
+  .Description {
+    width: calc(100% - 100px);
+    left: 32px;
+    top: 110px;
+  }
+
+  .Techs {
+    left: 32px;
+    top: 290px;
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1024px) {
+  .CardWrapper {
+    border-radius: 34px;
+    width: 560px;
+    height: 380px;
+  }
+
+  .Card {
+    border-radius: 32px;
+    height: 374px;
+  }
+
+  .Detail {
+    left: 36px;
+    top: 50px;
+  }
+
+  .NameProject {
+    left: 36px;
+    top: 72px;
+  }
+
+  .Description {
+    width: calc(100% - 120px);
+    left: 36px;
+    top: 120px;
+  }
+
+  .Techs {
+    left: 36px;
+    top: 290px;
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .CardWrapper {
+      width: 680px;
+      border-radius: 34px;
+  }
+
+  .Card {
+    border-radius: 32px;
+  }
+
+  .Detail {
+    left: 40px;
+    top: 68px;
+  }
+
+  .NameProject {
+    left: 40px;
+    top: 100px;
+  }
+
+  .Description {
+    width: calc(100% - 200px);
+    left: 40px;
+    top: 150px;
+  }
+
+  .Techs {
+    left: 40px;
+    top: 290px;
+  }
+}
+
+/*
+.CardWrapper {
+    padding: 3px;
+    border-radius: 34px;
+
+    background: linear-gradient(135deg, #f0ede624, #f0ede600 72%);
+    box-shadow: 73px 44px 34px rgba(33, 33, 33, 0.01), 41px 25px 29px rgba(33, 33, 33, 0.03), 18px 11px 21px rgba(33, 33, 33, 0.04), 5px 3px 12px rgba(33, 33, 33, 0.05);
+
+    width: 700px;
+    height: 400px;
+}
+
+.Card {
+    position: relative;
+    background: #050506;
+    border-radius: 32px;
+    padding: 2px;
+    overflow: hidden;
+
+    width: 700px;
+    height: 394px;
+}
+
+.Detail {
+
+    position: absolute;
+    width: 200px;
+    height: 4px;
+    left: 40px;
+    top: 68px;
+
+    background: linear-gradient(90deg, #066FD5 0%, rgba(6, 111, 213, 0) 100%);
+    border-radius: 8px;
+
+}
+
+.NameProject {
+
+    position: absolute;
+    width: auto;
+    height: 22px;
+    left: 40px;
+    top: 100px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 0;
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+
+    color: #F0EDE6;
+
+}
+
+
+.Description {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 40px;
+    top: 146px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+
+    color: #5F5F5F;
+
+}
+
+.Techs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 237.23px;
+    height: 20px;
+    left: 40px;
+    bottom: 24px;
+
+    & h2 {
+        width: 181px;
+        height: 11px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        leading-trim: both;
+        text-edge: cap;
+        display: flex;
+        align-items: center;
+
+        color: #5F5F5F;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    & .IconsTechs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        gap: 12px;
+
+        width: auto;
+        height: 20px;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+}
+
+.Btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px 8px 20px;
+    gap: 15px;
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 16px;
+    right: 16px;
+
+    background: linear-gradient(93.33deg, #066FD5 0%, #003FFF 100%);
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #F0EDE6;
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+
+    overflow: hidden;
+
+    & .IconArrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 28.23px;
+        height: 28.23px;
+        background: #F0EDE6;
+        border-radius: 9999px;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover .IconArrow {
+        transform: rotate(45deg);
+    }
+}
+
+.Btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
+
+    opacity: 0.50;
+    transform: skewX(-20deg);
+    animation: shine 1.5s infinite;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+*/

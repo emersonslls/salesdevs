@@ -1,0 +1,31 @@
+/* <----- VARIAVEIS -----> */
+:root {
+    /* CORES */
+    --Preto: #050506;
+    --Azul: #066FD5;
+    --Cinza: #5F5F5F;
+    --Laranja: #FF7229;
+    --Branco: #F0EDE6;
+
+    /* FONTES */
+    --font-poppins: 'Poppins', sans-serif;
+    --font-plus: "Plus Jakarta Sans", sans-serif;
+}
+
+/* SCROLLBAR */
+
+/* Largura */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Fundo */
+::-webkit-scrollbar-track {
+    background-color: var(--Preto);
+}
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+    background: var(--Azul);
+    border-radius: 25px;
+}
