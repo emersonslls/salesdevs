@@ -57,7 +57,7 @@ function Projeto() {
         "Projeto desenvolvido para criar uma página de links, focada em organização, praticidade e melhor experiência do usuário. Feedbacks e sugestões são sempre bem-vindos!",
       techIcons: [FigmaIcon, ReactIcon],
       linkLabel: "Veja o site no ar",
-      link: "https://emersonsalesdev.vercel.app",
+      link: "https://salesdevlinks.vercel.app",
     },
   ];
 
