@@ -191,9 +191,9 @@ nav li:hover {
   }
 
   & .RedesIcon {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
-    align-items: center;
+    align-items: center !important;
     padding: 0px;
     gap: 44px;
 
@@ -206,10 +206,10 @@ nav li:hover {
     flex-grow: 0;
 
     & .IconRedes {
-      display: flex;
+      display: flex !important;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      justify-content: center !important;
+      align-items: center !important;
       padding: 9.75px;
       gap: 9.75px;
 
